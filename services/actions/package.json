@@ -4,8 +4,8 @@
     "description": "Action handlers",
     "main": "build/server.js",
     "scripts": {
-        "build": "npm run gql-cdg && npm run build-this",
-        "build-this": "tsc --build",
+        "build": "npm run gql-cdg && npm run build:compile",
+        "build:compile": "tsc --build",
         "start": "node build/server.js",
         "dev": "nodenv -E ./.env -e \"npm run dev-internal\"",
         "dev-internal": "tsc-watch --onSuccess \"npm run-script --prefix=../../ run-services-actions\"",

@@ -3,21 +3,17 @@
     "version": "1.0.0",
     "description": "Presence counters",
     "main": "build/web-server.js",
-    "engines": {
-        "node": "16.x",
-        "npm": "^7.8.x"
-    },
     "scripts": {
-        "build": "npm run build-shared && npm run gql-cdg && npm run build-this && npm run-script copy-resources",
-        "build-this": "ttsc",
-        "build-shared": "npm run --prefix=../../ --workspace=shared build",
+        "build": "npm run gql-cdg && npm run build:compile && npm run-script copy-resources",
+        "build:compile": "tsc --build",
         "copy-resources": "rimraf build/resources && cpy --cwd=src/resources \"**/*\" ../../build/resources --parents",
         "start": "node build/server.js",
-        "dev-stage2": "tsc-watch --compiler \"ttypescript/bin/tsc\" --onSuccess \"npm run-script --prefix=../../ run-services-realtime\"",
-        "dev": "npm run build-shared && node-env-run -E ./.env -e \"npm run dev-stage2\"",
+        "dev-internal": "tsc-watch --onSuccess \"npm run-script --prefix=../../ run-services-realtime\"",
+        "dev": "node-env-run -E ./.env -e \"npm run dev-internal\"",
         "gql-cdg": "npx --no-install -p @graphql-codegen/cli graphql-codegen -- --config codegen.js",
         "test-publisher": "node-env-run -E ./src/test/.publisher.env -e \"ts-node ./src/test/publisher.ts\"",
-        "test-consumer": "node-env-run -E ./src/test/.consumer.env -e \"ts-node ./src/test/consumer.ts\""
+        "test-consumer": "node-env-run -E ./src/test/.consumer.env -e \"ts-node ./src/test/consumer.ts\"",
+        "postinstall": "ts-patch install"
     },
     "repository": {
         "type": "git",
@@ -26,9 +22,9 @@
     "author": "Clowdr CIC",
     "license": "ISC",
     "bugs": {
-        "url": "https://github.com/clowdr/clowdr-app/issues"
+        "url": "https://github.com/clowdr-app/clowdr/issues"
     },
-    "homepage": "https://github.com/clowdr/clowdr-app#readme",
+    "homepage": "https://github.com/clowdr-app/clowdr#readme",
     "dependencies": {
         "@apollo/client": "^3.3.20",
         "@graphql-codegen/cli": "^1.21.6",
@@ -70,7 +66,7 @@
         "socket.io-client": "^4.1.2",
         "socket.io-redis": "^6.0.1",
         "subscriptions-transport-ws": "^0.9.19",
-        "ttypescript": "^1.5.12",
+        "ts-patch": "^1.3.4",
         "typescript": "^4.3.5",
         "typescript-is": "^0.18.3",
         "utf-8-validate": "^5.0.5",
@@ -79,5 +75,9 @@
     },
     "devDependencies": {
         "tsc-watch": "^4.4.0"
+    },
+    "engines": {
+        "node": "16.x",
+        "npm": "^7.8.x"
     }
 }

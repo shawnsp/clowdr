@@ -34048,7 +34048,7 @@ export type InsertReadUpToIndexMutation = { __typename?: "mutation_root" } & {
     >;
 };
 
-export const EmptyQueryDocument: DocumentNode<EmptyQueryQuery, EmptyQueryQueryVariables> = {
+export const EmptyQueryDocument = {
     kind: "Document",
     definitions: [
         {
@@ -34070,8 +34070,8 @@ export const EmptyQueryDocument: DocumentNode<EmptyQueryQuery, EmptyQueryQueryVa
             },
         },
     ],
-};
-export const ChatInfoDocument: DocumentNode<ChatInfoQuery, ChatInfoQueryVariables> = {
+} as unknown as DocumentNode<EmptyQueryQuery, EmptyQueryQueryVariables>;
+export const ChatInfoDocument = {
     kind: "Document",
     definitions: [
         {
@@ -34173,8 +34173,8 @@ export const ChatInfoDocument: DocumentNode<ChatInfoQuery, ChatInfoQueryVariable
             },
         },
     ],
-};
-export const PinsDocument: DocumentNode<PinsQuery, PinsQueryVariables> = {
+} as unknown as DocumentNode<ChatInfoQuery, ChatInfoQueryVariables>;
+export const PinsDocument = {
     kind: "Document",
     definitions: [
         {
@@ -34234,11 +34234,8 @@ export const PinsDocument: DocumentNode<PinsQuery, PinsQueryVariables> = {
             },
         },
     ],
-};
-export const PushNotificationSubscriptionsDocument: DocumentNode<
-    PushNotificationSubscriptionsQuery,
-    PushNotificationSubscriptionsQueryVariables
-> = {
+} as unknown as DocumentNode<PinsQuery, PinsQueryVariables>;
+export const PushNotificationSubscriptionsDocument = {
     kind: "Document",
     definitions: [
         {
@@ -34300,8 +34297,8 @@ export const PushNotificationSubscriptionsDocument: DocumentNode<
             },
         },
     ],
-};
-export const ReadUpToIndexDocument: DocumentNode<ReadUpToIndexQuery, ReadUpToIndexQueryVariables> = {
+} as unknown as DocumentNode<PushNotificationSubscriptionsQuery, PushNotificationSubscriptionsQueryVariables>;
+export const ReadUpToIndexDocument = {
     kind: "Document",
     definitions: [
         {
@@ -34393,8 +34390,8 @@ export const ReadUpToIndexDocument: DocumentNode<ReadUpToIndexQuery, ReadUpToInd
             },
         },
     ],
-};
-export const RegistrantInfoDocument: DocumentNode<RegistrantInfoQuery, RegistrantInfoQueryVariables> = {
+} as unknown as DocumentNode<ReadUpToIndexQuery, ReadUpToIndexQueryVariables>;
+export const RegistrantInfoDocument = {
     kind: "Document",
     definitions: [
         {
@@ -34434,8 +34431,8 @@ export const RegistrantInfoDocument: DocumentNode<RegistrantInfoQuery, Registran
             },
         },
     ],
-};
-export const EventInfoDocument: DocumentNode<EventInfoQuery, EventInfoQueryVariables> = {
+} as unknown as DocumentNode<RegistrantInfoQuery, RegistrantInfoQueryVariables>;
+export const EventInfoDocument = {
     kind: "Document",
     definitions: [
         {
@@ -34524,8 +34521,8 @@ export const EventInfoDocument: DocumentNode<EventInfoQuery, EventInfoQueryVaria
             },
         },
     ],
-};
-export const SubscriptionsDocument: DocumentNode<SubscriptionsQuery, SubscriptionsQueryVariables> = {
+} as unknown as DocumentNode<EventInfoQuery, EventInfoQueryVariables>;
+export const SubscriptionsDocument = {
     kind: "Document",
     definitions: [
         {
@@ -34585,8 +34582,8 @@ export const SubscriptionsDocument: DocumentNode<SubscriptionsQuery, Subscriptio
             },
         },
     ],
-};
-export const UserPermissionsDocument: DocumentNode<UserPermissionsQuery, UserPermissionsQueryVariables> = {
+} as unknown as DocumentNode<SubscriptionsQuery, SubscriptionsQueryVariables>;
+export const UserPermissionsDocument = {
     kind: "Document",
     definitions: [
         {
@@ -34647,11 +34644,8 @@ export const UserPermissionsDocument: DocumentNode<UserPermissionsQuery, UserPer
             },
         },
     ],
-};
-export const GetUserConferenceSlugsDocument: DocumentNode<
-    GetUserConferenceSlugsQuery,
-    GetUserConferenceSlugsQueryVariables
-> = {
+} as unknown as DocumentNode<UserPermissionsQuery, UserPermissionsQueryVariables>;
+export const GetUserConferenceSlugsDocument = {
     kind: "Document",
     definitions: [
         {
@@ -34729,19 +34723,14 @@ export const GetUserConferenceSlugsDocument: DocumentNode<
                                                                                                 kind: "ObjectValue",
                                                                                                 fields: [
                                                                                                     {
-                                                                                                        kind:
-                                                                                                            "ObjectField",
+                                                                                                        kind: "ObjectField",
                                                                                                         name: {
-                                                                                                            kind:
-                                                                                                                "Name",
-                                                                                                            value:
-                                                                                                                "_eq",
+                                                                                                            kind: "Name",
+                                                                                                            value: "_eq",
                                                                                                         },
                                                                                                         value: {
-                                                                                                            kind:
-                                                                                                                "EnumValue",
-                                                                                                            value:
-                                                                                                                "CONFERENCE_VIEW",
+                                                                                                            kind: "EnumValue",
+                                                                                                            value: "CONFERENCE_VIEW",
                                                                                                         },
                                                                                                     },
                                                                                                 ],
@@ -34818,26 +34807,19 @@ export const GetUserConferenceSlugsDocument: DocumentNode<
                                                                                                         value: "userId",
                                                                                                     },
                                                                                                     value: {
-                                                                                                        kind:
-                                                                                                            "ObjectValue",
+                                                                                                        kind: "ObjectValue",
                                                                                                         fields: [
                                                                                                             {
-                                                                                                                kind:
-                                                                                                                    "ObjectField",
+                                                                                                                kind: "ObjectField",
                                                                                                                 name: {
-                                                                                                                    kind:
-                                                                                                                        "Name",
-                                                                                                                    value:
-                                                                                                                        "_eq",
+                                                                                                                    kind: "Name",
+                                                                                                                    value: "_eq",
                                                                                                                 },
                                                                                                                 value: {
-                                                                                                                    kind:
-                                                                                                                        "Variable",
+                                                                                                                    kind: "Variable",
                                                                                                                     name: {
-                                                                                                                        kind:
-                                                                                                                            "Name",
-                                                                                                                        value:
-                                                                                                                            "userId",
+                                                                                                                        kind: "Name",
+                                                                                                                        value: "userId",
                                                                                                                     },
                                                                                                                 },
                                                                                                             },
@@ -34874,11 +34856,8 @@ export const GetUserConferenceSlugsDocument: DocumentNode<
             },
         },
     ],
-};
-export const GetExistingProgramPersonDocument: DocumentNode<
-    GetExistingProgramPersonQuery,
-    GetExistingProgramPersonQueryVariables
-> = {
+} as unknown as DocumentNode<GetUserConferenceSlugsQuery, GetUserConferenceSlugsQueryVariables>;
+export const GetExistingProgramPersonDocument = {
     kind: "Document",
     definitions: [
         {
@@ -35022,11 +35001,8 @@ export const GetExistingProgramPersonDocument: DocumentNode<
             },
         },
     ],
-};
-export const InsertEventParticipantDocument: DocumentNode<
-    InsertEventParticipantMutation,
-    InsertEventParticipantMutationVariables
-> = {
+} as unknown as DocumentNode<GetExistingProgramPersonQuery, GetExistingProgramPersonQueryVariables>;
+export const InsertEventParticipantDocument = {
     kind: "Document",
     definitions: [
         {
@@ -35108,11 +35084,8 @@ export const InsertEventParticipantDocument: DocumentNode<
             },
         },
     ],
-};
-export const DeletePushNotificationSubscriptionDocument: DocumentNode<
-    DeletePushNotificationSubscriptionMutation,
-    DeletePushNotificationSubscriptionMutationVariables
-> = {
+} as unknown as DocumentNode<InsertEventParticipantMutation, InsertEventParticipantMutationVariables>;
+export const DeletePushNotificationSubscriptionDocument = {
     kind: "Document",
     definitions: [
         {
@@ -35148,8 +35121,11 @@ export const DeletePushNotificationSubscriptionDocument: DocumentNode<
             },
         },
     ],
-};
-export const VapidKeysDocument: DocumentNode<VapidKeysQuery, VapidKeysQueryVariables> = {
+} as unknown as DocumentNode<
+    DeletePushNotificationSubscriptionMutation,
+    DeletePushNotificationSubscriptionMutationVariables
+>;
+export const VapidKeysDocument = {
     kind: "Document",
     definitions: [
         {
@@ -35201,8 +35177,8 @@ export const VapidKeysDocument: DocumentNode<VapidKeysQuery, VapidKeysQueryVaria
             },
         },
     ],
-};
-export const SetVapidKeysDocument: DocumentNode<SetVapidKeysMutation, SetVapidKeysMutationVariables> = {
+} as unknown as DocumentNode<VapidKeysQuery, VapidKeysQueryVariables>;
+export const SetVapidKeysDocument = {
     kind: "Document",
     definitions: [
         {
@@ -35305,8 +35281,8 @@ export const SetVapidKeysDocument: DocumentNode<SetVapidKeysMutation, SetVapidKe
             },
         },
     ],
-};
-export const SelectViewCountsDocument: DocumentNode<SelectViewCountsQuery, SelectViewCountsQueryVariables> = {
+} as unknown as DocumentNode<SetVapidKeysMutation, SetVapidKeysMutationVariables>;
+export const SelectViewCountsDocument = {
     kind: "Document",
     definitions: [
         {
@@ -35543,8 +35519,8 @@ export const SelectViewCountsDocument: DocumentNode<SelectViewCountsQuery, Selec
             },
         },
     ],
-};
-export const InsertViewCountsDocument: DocumentNode<InsertViewCountsMutation, InsertViewCountsMutationVariables> = {
+} as unknown as DocumentNode<SelectViewCountsQuery, SelectViewCountsQueryVariables>;
+export const InsertViewCountsDocument = {
     kind: "Document",
     definitions: [
         {
@@ -35722,11 +35698,8 @@ export const InsertViewCountsDocument: DocumentNode<InsertViewCountsMutation, In
             },
         },
     ],
-};
-export const InsertChatMessagesDocument: DocumentNode<
-    InsertChatMessagesMutation,
-    InsertChatMessagesMutationVariables
-> = {
+} as unknown as DocumentNode<InsertViewCountsMutation, InsertViewCountsMutationVariables>;
+export const InsertChatMessagesDocument = {
     kind: "Document",
     definitions: [
         {
@@ -35799,8 +35772,8 @@ export const InsertChatMessagesDocument: DocumentNode<
             },
         },
     ],
-};
-export const UpdateChatMessageDocument: DocumentNode<UpdateChatMessageMutation, UpdateChatMessageMutationVariables> = {
+} as unknown as DocumentNode<InsertChatMessagesMutation, InsertChatMessagesMutationVariables>;
+export const UpdateChatMessageDocument = {
     kind: "Document",
     definitions: [
         {
@@ -35879,11 +35852,8 @@ export const UpdateChatMessageDocument: DocumentNode<UpdateChatMessageMutation, 
             },
         },
     ],
-};
-export const DeleteChatMessagesDocument: DocumentNode<
-    DeleteChatMessagesMutation,
-    DeleteChatMessagesMutationVariables
-> = {
+} as unknown as DocumentNode<UpdateChatMessageMutation, UpdateChatMessageMutationVariables>;
+export const DeleteChatMessagesDocument = {
     kind: "Document",
     definitions: [
         {
@@ -35958,11 +35928,8 @@ export const DeleteChatMessagesDocument: DocumentNode<
             },
         },
     ],
-};
-export const InsertChatReactionsDocument: DocumentNode<
-    InsertChatReactionsMutation,
-    InsertChatReactionsMutationVariables
-> = {
+} as unknown as DocumentNode<DeleteChatMessagesMutation, DeleteChatMessagesMutationVariables>;
+export const InsertChatReactionsDocument = {
     kind: "Document",
     definitions: [
         {
@@ -36038,11 +36005,8 @@ export const InsertChatReactionsDocument: DocumentNode<
             },
         },
     ],
-};
-export const UpdateChatReactionDocument: DocumentNode<
-    UpdateChatReactionMutation,
-    UpdateChatReactionMutationVariables
-> = {
+} as unknown as DocumentNode<InsertChatReactionsMutation, InsertChatReactionsMutationVariables>;
+export const UpdateChatReactionDocument = {
     kind: "Document",
     definitions: [
         {
@@ -36121,11 +36085,8 @@ export const UpdateChatReactionDocument: DocumentNode<
             },
         },
     ],
-};
-export const DeleteChatReactionsDocument: DocumentNode<
-    DeleteChatReactionsMutation,
-    DeleteChatReactionsMutationVariables
-> = {
+} as unknown as DocumentNode<UpdateChatReactionMutation, UpdateChatReactionMutationVariables>;
+export const DeleteChatReactionsDocument = {
     kind: "Document",
     definitions: [
         {
@@ -36200,11 +36161,8 @@ export const DeleteChatReactionsDocument: DocumentNode<
             },
         },
     ],
-};
-export const RegistrantIdsFromChatsAndUsersDocument: DocumentNode<
-    RegistrantIdsFromChatsAndUsersQuery,
-    RegistrantIdsFromChatsAndUsersQueryVariables
-> = {
+} as unknown as DocumentNode<DeleteChatReactionsMutation, DeleteChatReactionsMutationVariables>;
+export const RegistrantIdsFromChatsAndUsersDocument = {
     kind: "Document",
     definitions: [
         {
@@ -36325,11 +36283,8 @@ export const RegistrantIdsFromChatsAndUsersDocument: DocumentNode<
             },
         },
     ],
-};
-export const InsertReadUpToIndexDocument: DocumentNode<
-    InsertReadUpToIndexMutation,
-    InsertReadUpToIndexMutationVariables
-> = {
+} as unknown as DocumentNode<RegistrantIdsFromChatsAndUsersQuery, RegistrantIdsFromChatsAndUsersQueryVariables>;
+export const InsertReadUpToIndexDocument = {
     kind: "Document",
     definitions: [
         {
@@ -36399,4 +36354,4 @@ export const InsertReadUpToIndexDocument: DocumentNode<
             },
         },
     ],
-};
+} as unknown as DocumentNode<InsertReadUpToIndexMutation, InsertReadUpToIndexMutationVariables>;
