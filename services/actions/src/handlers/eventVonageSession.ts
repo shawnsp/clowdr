@@ -1,5 +1,5 @@
 import { gql } from "@apollo/client/core";
-import { VonageSessionLayoutType } from "@clowdr-app/shared-types/build/vonage";
+import { VonageSessionLayoutType } from "@clowdr-app/shared-types";
 import assert from "assert";
 import * as R from "ramda";
 import { EventVonageSession_RemoveInvalidStreamsDocument } from "../generated/graphql";

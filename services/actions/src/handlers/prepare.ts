@@ -1,5 +1,5 @@
 import { gql } from "@apollo/client/core";
-import { Content_ElementType_Enum, ElementDataBlob } from "@clowdr-app/shared-types/build/content";
+import { Content_ElementType_Enum, ElementDataBlob } from "@clowdr-app/shared-types";
 import assert from "assert";
 import {
     CompleteConferencePrepareJobDocument,

@@ -1,9 +1,5 @@
 import { gql } from "@apollo/client/core";
-import {
-    YouTubeChannelDetails,
-    YouTubeDataBlob,
-    YouTubePlaylistDetails,
-} from "@clowdr-app/shared-types/build/registrantGoogleAccount";
+import { YouTubeChannelDetails, YouTubeDataBlob, YouTubePlaylistDetails } from "@clowdr-app/shared-types";
 import assert from "assert";
 import { IsNumber, IsString, validateSync } from "class-validator";
 import { OAuth2Client } from "google-auth-library";
@@ -140,23 +136,21 @@ export async function handleRefreshYouTubeData(payload: refreshYouTubeDataArgs):
 
     const youTubeData: YouTubeDataBlob = {
         channels:
-            channels.data.items?.map(
-                (channel): YouTubeChannelDetails => {
-                    const playlists = allPlaylists.filter((p) => p.snippet && p.snippet.channelId === channel.id);
-                    return {
-                        description: channel.snippet?.description ?? "",
-                        title: channel.snippet?.title ?? "<unknown title>",
-                        id: channel.id ?? "",
-                        playlists: playlists.map(
-                            (p): YouTubePlaylistDetails => ({
-                                id: p.id ?? "",
-                                title: p.snippet?.title ?? "<unknown title>",
-                                description: p.snippet?.description ?? "",
-                            })
-                        ),
-                    };
-                }
-            ) ?? [],
+            channels.data.items?.map((channel): YouTubeChannelDetails => {
+                const playlists = allPlaylists.filter((p) => p.snippet && p.snippet.channelId === channel.id);
+                return {
+                    description: channel.snippet?.description ?? "",
+                    title: channel.snippet?.title ?? "<unknown title>",
+                    id: channel.id ?? "",
+                    playlists: playlists.map(
+                        (p): YouTubePlaylistDetails => ({
+                            id: p.id ?? "",
+                            title: p.snippet?.title ?? "<unknown title>",
+                            description: p.snippet?.description ?? "",
+                        })
+                    ),
+                };
+            }) ?? [],
     };
 
     await apolloClient.mutate({

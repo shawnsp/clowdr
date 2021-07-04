@@ -1,14 +1,13 @@
 {
-    "extends": "../tsconfig.base.json",
+    "extends": "../../tsconfig.base.json",
     "include": ["src/**/*"],
     "exclude": ["node_modules", "**/*.spec.ts", "**/*.test.ts", "jest.config.ts"],
     "compilerOptions": {
         "baseUrl": "./",
-        "outDir": "./build/",
-        "rootDir": "./src/",
+        "outDir": "./build/" /* Redirect output structure to the directory. */,
+        "rootDir": "./src/" /* Specify the root directory of input files. Use to control the output directory structure with --outDir. */,
         "composite": true,
 
         "plugins": [{ "transform": "typescript-is/lib/transform-inline/transformer" }]
-    },
-    "references": [{ "path": "../../packages/shared" }]
+    }
 }

@@ -1,5 +1,5 @@
 import { gql } from "@apollo/client/core";
-import { ContinuationTo, ContinuationType } from "@clowdr-app/shared-types/build/continuation";
+import { ContinuationTo, ContinuationType } from "@clowdr-app/shared-types";
 import { is } from "typescript-is";
 import {
     EndChatDuplicationDocument,

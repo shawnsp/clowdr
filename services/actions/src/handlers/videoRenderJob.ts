@@ -1,5 +1,5 @@
 import { gql } from "@apollo/client/core";
-import { notEmpty } from "@clowdr-app/shared-types/build/utils";
+import { notEmpty } from "@clowdr-app/shared-types";
 import assert from "assert";
 import { assertType } from "typescript-is";
 import {

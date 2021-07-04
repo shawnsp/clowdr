@@ -1,5 +1,5 @@
 import { gql } from "@apollo/client/core";
-import { Content_ElementType_Enum, ElementBaseType, ElementDataBlob } from "@clowdr-app/shared-types/build/content";
+import { Content_ElementType_Enum, ElementBaseType, ElementDataBlob } from "@clowdr-app/shared-types";
 import assert from "assert";
 import { formatRFC7231 } from "date-fns";
 import {

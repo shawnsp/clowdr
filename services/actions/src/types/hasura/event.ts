@@ -1,6 +1,4 @@
-import { ElementDataBlob } from "@clowdr-app/shared-types/build/content";
-import { VonageSessionLayoutData } from "@clowdr-app/shared-types/build/vonage";
-import { CombineVideosJobDataBlob } from "@clowdr-app/shared-types/src/combineVideosJob";
+import { CombineVideosJobDataBlob, ElementDataBlob, VonageSessionLayoutData } from "@clowdr-app/shared-types";
 import { Credentials } from "google-auth-library/build/src/auth/credentials";
 import {
     Content_ElementType_Enum,

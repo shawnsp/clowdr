@@ -1,4 +1,4 @@
-import { MediaConvertEvent, TranscodeMode } from "@clowdr-app/shared-types/build/sns/mediaconvert";
+import { MediaConvertEvent, TranscodeMode } from "@clowdr-app/shared-types";
 import { text } from "body-parser";
 import express, { Request, Response } from "express";
 import { assertType } from "typescript-is";

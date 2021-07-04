@@ -1,5 +1,5 @@
 import { gql } from "@apollo/client/core";
-import { ElementBaseType, ElementDataBlob } from "@clowdr-app/shared-types/build/content";
+import { ElementBaseType, ElementDataBlob } from "@clowdr-app/shared-types";
 import AmazonS3Uri from "amazon-s3-uri";
 import assert from "assert";
 import { Credentials } from "google-auth-library";

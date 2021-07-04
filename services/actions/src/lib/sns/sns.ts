@@ -1,4 +1,4 @@
-import { SNSNotification } from "@clowdr-app/shared-types/build/sns";
+import { SNSNotification } from "@clowdr-app/shared-types";
 import axios from "axios";
 import MessageValidator from "sns-validator";
 import { assertType } from "typescript-is";

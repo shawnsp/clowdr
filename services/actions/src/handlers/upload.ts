@@ -1,19 +1,18 @@
 import { gql } from "@apollo/client/core";
 import {
-    ConferenceConfigurationKey,
-    EmailTemplate_BaseConfig,
-    isEmailTemplate_BaseConfig,
-} from "@clowdr-app/shared-types/build/conferenceConfiguration";
-import {
     AWSJobStatus,
+    ConferenceConfigurationKey,
     Content_ElementType_Enum,
     ElementBaseType,
     ElementBlob,
     ElementDataBlob,
     ElementVersionData,
+    EmailTemplate_BaseConfig,
+    EmailView_SubmissionRequest,
+    EMAIL_TEMPLATE_SUBMISSION_REQUEST,
+    isEmailTemplate_BaseConfig,
     VideoElementBlob,
-} from "@clowdr-app/shared-types/build/content";
-import { EmailView_SubmissionRequest, EMAIL_TEMPLATE_SUBMISSION_REQUEST } from "@clowdr-app/shared-types/build/email";
+} from "@clowdr-app/shared-types";
 import AmazonS3URI from "amazon-s3-uri";
 import assert from "assert";
 import Mustache from "mustache";

@@ -7,7 +7,7 @@ import {
     ElementVersionData,
     TranscodeDetails,
     VideoElementBlob,
-} from "@clowdr-app/shared-types/build/content";
+} from "@clowdr-app/shared-types";
 import assert from "assert";
 import R from "ramda";
 import { is } from "typescript-is";

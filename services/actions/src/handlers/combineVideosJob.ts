@@ -11,12 +11,12 @@ import {
 } from "@aws-sdk/client-mediaconvert";
 import {
     AWSJobStatus,
+    CombineVideosJobDataBlob,
     Content_ElementType_Enum,
     ElementBaseType,
     ElementDataBlob,
-} from "@clowdr-app/shared-types/build/content";
-import { TranscodeMode } from "@clowdr-app/shared-types/build/sns/mediaconvert";
-import { CombineVideosJobDataBlob } from "@clowdr-app/shared-types/src/combineVideosJob";
+    TranscodeMode,
+} from "@clowdr-app/shared-types";
 import assert from "assert";
 import * as R from "ramda";
 import { assertType } from "typescript-is";

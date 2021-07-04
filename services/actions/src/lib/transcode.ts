@@ -15,8 +15,7 @@ import {
     VideoCodec,
     VideoDescription,
 } from "@aws-sdk/client-mediaconvert";
-import { AWSJobStatus, TranscodeDetails, VideoElementBlob } from "@clowdr-app/shared-types/build/content";
-import { TranscodeMode } from "@clowdr-app/shared-types/build/sns/mediaconvert";
+import { AWSJobStatus, TranscodeDetails, TranscodeMode, VideoElementBlob } from "@clowdr-app/shared-types";
 import AmazonS3URI from "amazon-s3-uri";
 import assert from "assert";
 import path from "path";

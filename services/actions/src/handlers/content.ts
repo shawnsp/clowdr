@@ -1,11 +1,12 @@
 import { gql } from "@apollo/client/core";
 import {
+    AWSJobStatus,
     ConferenceConfigurationKey,
     EmailTemplate_BaseConfig,
+    EmailView_SubtitlesGenerated,
+    EMAIL_TEMPLATE_SUBTITLES_GENERATED,
     isEmailTemplate_BaseConfig,
-} from "@clowdr-app/shared-types/build/conferenceConfiguration";
-import { AWSJobStatus } from "@clowdr-app/shared-types/build/content";
-import { EmailView_SubtitlesGenerated, EMAIL_TEMPLATE_SUBTITLES_GENERATED } from "@clowdr-app/shared-types/build/email";
+} from "@clowdr-app/shared-types";
 import assert from "assert";
 import Mustache from "mustache";
 import R from "ramda";

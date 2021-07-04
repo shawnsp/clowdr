@@ -1,4 +1,4 @@
-import { TranscribeEvent } from "@clowdr-app/shared-types/build/sns/transcribe";
+import { TranscribeEvent } from "@clowdr-app/shared-types";
 import { text } from "body-parser";
 import express, { Request, Response } from "express";
 import { assertType } from "typescript-is";

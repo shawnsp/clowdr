@@ -1,6 +1,7 @@
 import assert from "assert";
 import { json } from "body-parser";
 import express, { Request, Response } from "express";
+import "reflect-metadata";
 import { AuthenticatedRequest } from "./checkScopes";
 import {
     invitationConfirmCurrentHandler,
