@@ -1,5 +1,5 @@
 import { gql } from "@apollo/client/core";
-import { VideoBroadcastBlob } from "@clowdr-app/shared-types/build/content";
+import { VideoBroadcastBlob } from "@clowdr-app/shared-types";
 import { Bunyan, RootLogger } from "@eropple/nestjs-bunyan";
 import { Injectable } from "@nestjs/common";
 import { add, addHours, addMinutes } from "date-fns";

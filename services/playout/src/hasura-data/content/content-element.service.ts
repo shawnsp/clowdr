@@ -6,7 +6,7 @@ import {
     isElementDataBlob,
     VideoBroadcastBlob,
     VideoElementBlob,
-} from "@clowdr-app/shared-types/build/content";
+} from "@clowdr-app/shared-types";
 import { Bunyan, RootLogger } from "@eropple/nestjs-bunyan/dist";
 import { Injectable } from "@nestjs/common";
 import AmazonS3URI from "amazon-s3-uri";

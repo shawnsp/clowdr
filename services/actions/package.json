@@ -6,7 +6,6 @@
     "scripts": {
         "build": "npm run gql-cdg && npm run build-this",
         "build-this": "tsc --build",
-        "build-shared": "npm run --prefix=../../ --workspace=shared build",
         "start": "node build/server.js",
         "dev": "nodenv -E ./.env -e \"npm run dev-internal\"",
         "dev-internal": "tsc-watch --onSuccess \"npm run-script --prefix=../../ run-services-actions\"",
