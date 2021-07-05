@@ -9,7 +9,7 @@ import {
     Spinner,
     useToast,
 } from "@chakra-ui/react";
-import type { IntermediaryScheduleData } from "@clowdr-app/shared-types/build/import/intermediary";
+import type { IntermediaryScheduleData } from "@clowdr-app/shared-types";
 import assert from "assert";
 import React, { useEffect, useState } from "react";
 import JSONataQueryModal from "../../../../Files/JSONataQueryModal";
@@ -38,9 +38,8 @@ export default function MergePanel({ data }: { data: Record<string, Intermediary
     const [mergedEventsMap, setMergedEventsMap] = useState<Map<string, EventDescriptor>>();
     const [mergedRoomsMap, setMergedRoomsMap] = useState<Map<string, RoomDescriptor>>();
     const [mergedTagsMap, setMergedTagsMap] = useState<Map<string, TagDescriptor>>();
-    const [mergedOriginatingDatasMap, setMergedOriginatingDatasMap] = useState<
-        Map<string, OriginatingDataDescriptor>
-    >();
+    const [mergedOriginatingDatasMap, setMergedOriginatingDatasMap] =
+        useState<Map<string, OriginatingDataDescriptor>>();
     const [changes, setChanges] = useState<ChangeSummary[]>([]);
     const [error, setError] = useState<string | null>(null);
 

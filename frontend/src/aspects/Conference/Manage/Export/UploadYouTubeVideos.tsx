@@ -29,8 +29,13 @@ import {
     useToast,
     VStack,
 } from "@chakra-ui/react";
-import { ElementBaseType, ElementDataBlob, isElementDataBlob } from "@clowdr-app/shared-types/build/content";
-import { isYouTubeDataBlob, YouTubeDataBlob } from "@clowdr-app/shared-types/build/registrantGoogleAccount";
+import {
+    ElementBaseType,
+    ElementDataBlob,
+    isElementDataBlob,
+    isYouTubeDataBlob,
+    YouTubeDataBlob,
+} from "@clowdr-app/shared-types";
 import { Field, FieldArray, FieldProps, Form, Formik } from "formik";
 import Mustache from "mustache";
 import * as R from "ramda";

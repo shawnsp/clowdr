@@ -42,7 +42,7 @@ import {
     useToast,
     VStack,
 } from "@chakra-ui/react";
-import { ElementBaseTypes } from "@clowdr-app/shared-types/build/content";
+import { ElementBaseTypes } from "@clowdr-app/shared-types";
 import * as R from "ramda";
 import React, { useMemo, useState } from "react";
 import {

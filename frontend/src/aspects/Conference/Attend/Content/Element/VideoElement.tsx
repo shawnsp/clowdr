@@ -1,5 +1,5 @@
 import { Heading, Text } from "@chakra-ui/react";
-import type { VideoElementBlob } from "@clowdr-app/shared-types/build/content";
+import type { VideoElementBlob } from "@clowdr-app/shared-types";
 import { WebVTTConverter } from "@clowdr-app/srt-webvtt";
 import AmazonS3URI from "amazon-s3-uri";
 import type Hls from "hls.js";
@@ -40,7 +40,11 @@ export function VideoElement({
         return `https://s3.${import.meta.env.SNOWPACK_PUBLIC_AWS_REGION}.amazonaws.com/${bucket}/${key}`;
     }, [videoElementData.s3Url, videoElementData.transcode?.s3Url]);
 
-    const { result: subtitlesUrl, loading, error } = useAsync(async () => {
+    const {
+        result: subtitlesUrl,
+        loading,
+        error,
+    } = useAsync(async () => {
         if (!videoElementData.subtitles["en_US"] || !videoElementData.subtitles["en_US"].s3Url?.length) {
             return undefined;
         } else {

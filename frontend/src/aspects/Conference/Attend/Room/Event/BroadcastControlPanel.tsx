@@ -1,6 +1,6 @@
 import { gql } from "@apollo/client";
 import { Accordion, AccordionButton, AccordionItem, AccordionPanel, Button, useToast } from "@chakra-ui/react";
-import { VonageSessionLayoutData, VonageSessionLayoutType } from "@clowdr-app/shared-types/build/vonage";
+import { VonageSessionLayoutData, VonageSessionLayoutType } from "@clowdr-app/shared-types";
 import React, { useCallback } from "react";
 import {
     EventParticipantStreamDetailsFragment,

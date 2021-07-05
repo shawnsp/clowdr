@@ -15,7 +15,7 @@
 //     useToast,
 //     VStack,
 // } from "@chakra-ui/react";
-// import { ElementPublishState, elementPublishState } from "@clowdr-app/shared-types/build/content";
+// import { ElementPublishState, elementPublishState } from "@clowdr-app/shared-types";
 // import * as R from "ramda";
 // import React, { useCallback, useEffect, useMemo, useState } from "react";
 // import { useInsertPublishVideoJobsMutation, useSelectItemsQuery } from "../../../../generated/graphql";

@@ -27,9 +27,9 @@ import {
 import {
     ConferenceConfigurationKey,
     EmailTemplate_BaseConfig,
+    EMAIL_TEMPLATE_SUBMISSION_REQUEST,
     isEmailTemplate_BaseConfig,
-} from "@clowdr-app/shared-types/build/conferenceConfiguration";
-import { EMAIL_TEMPLATE_SUBMISSION_REQUEST } from "@clowdr-app/shared-types/build/email";
+} from "@clowdr-app/shared-types";
 import { Field, FieldProps, Form, Formik } from "formik";
 import * as R from "ramda";
 import React, { useMemo, useState } from "react";
@@ -151,7 +151,7 @@ export function SendSubmissionRequestsModal({
                     subjectTemplate: null,
                 };
                 if (conferenceConfiguration?.value && isEmailTemplate_BaseConfig(conferenceConfiguration.value)) {
-                    existingTemplate = (conferenceConfiguration.value as unknown) as EmailTemplate_BaseConfig;
+                    existingTemplate = conferenceConfiguration.value as unknown as EmailTemplate_BaseConfig;
                 }
 
                 return (

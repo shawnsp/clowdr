@@ -1,8 +1,5 @@
 import { Box, Heading, Tab, TabList, TabPanel, TabPanels, Tabs } from "@chakra-ui/react";
-import {
-    IntermediaryContentData,
-    JSONataToIntermediaryContent,
-} from "@clowdr-app/shared-types/build/import/intermediary";
+import { IntermediaryContentData, JSONataToIntermediaryContent } from "@clowdr-app/shared-types";
 import React, { useMemo, useState } from "react";
 import { Permissions_Permission_Enum } from "../../../../../generated/graphql";
 import PageNotFound from "../../../../Errors/PageNotFound";
@@ -296,9 +293,10 @@ export default function ImportContentPage(): JSX.Element {
             ),
         [data]
     );
-    const reviewPanel = useMemo(() => <ReviewPanel data={intermediaryData} defaultQuery={defaultReviewQuery} />, [
-        intermediaryData,
-    ]);
+    const reviewPanel = useMemo(
+        () => <ReviewPanel data={intermediaryData} defaultQuery={defaultReviewQuery} />,
+        [intermediaryData]
+    );
     const mergePanel = useMemo(() => <MergePanel data={intermediaryData} />, [intermediaryData]);
 
     return (

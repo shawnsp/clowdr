@@ -23,12 +23,7 @@ import {
     useDisclosure,
     VStack,
 } from "@chakra-ui/react";
-import {
-    AWSJobStatus,
-    Content_ElementType_Enum,
-    ElementDataBlob,
-    isElementDataBlob,
-} from "@clowdr-app/shared-types/build/content";
+import { AWSJobStatus, Content_ElementType_Enum, ElementDataBlob, isElementDataBlob } from "@clowdr-app/shared-types";
 import * as R from "ramda";
 import React, { PropsWithChildren, useMemo } from "react";
 import { Permissions_Permission_Enum, Room_Mode_Enum, usePreshowChecklistQuery } from "../../../../generated/graphql";
@@ -596,11 +591,9 @@ export default function ChecklistPage(): JSX.Element {
         const nonsyncedEvents = checklistResponse.data?.allLiveEventsWithPeople.filter(
             (event) =>
                 event.item &&
-                ![
-                    ...event.item.itemPeopleWithRegistrant,
-                    ...event.item.itemPeopleWithoutRegistrant,
-                ].every((itemPerson) =>
-                    event.eventPeople.some((eventPerson) => eventPerson.personId === itemPerson.personId)
+                ![...event.item.itemPeopleWithRegistrant, ...event.item.itemPeopleWithoutRegistrant].every(
+                    (itemPerson) =>
+                        event.eventPeople.some((eventPerson) => eventPerson.personId === itemPerson.personId)
                 )
         );
         return (

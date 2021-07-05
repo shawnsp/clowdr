@@ -17,7 +17,7 @@ import {
     ElementDataBlob,
     isElementDataBlob,
     VideoElementBlob,
-} from "@clowdr-app/shared-types/build/content";
+} from "@clowdr-app/shared-types";
 import * as R from "ramda";
 import React, { useEffect, useMemo, useRef, useState } from "react";
 import { useVideoPlayer_GetElementQuery } from "../../../../../generated/graphql";

@@ -1,7 +1,6 @@
 import { gql } from "@apollo/client";
 import { Divider, Grid, GridItem, Spinner } from "@chakra-ui/react";
-import { ElementDataBlob, isElementDataBlob } from "@clowdr-app/shared-types/build/content";
-import { isLayoutDataBlob, LayoutDataBlob } from "@clowdr-app/shared-types/build/content/layoutData";
+import { ElementDataBlob, isElementDataBlob, isLayoutDataBlob, LayoutDataBlob } from "@clowdr-app/shared-types";
 import * as R from "ramda";
 import React, { useMemo } from "react";
 import {

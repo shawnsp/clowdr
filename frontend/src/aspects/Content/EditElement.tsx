@@ -1,5 +1,5 @@
 import { Text } from "@chakra-ui/react";
-import { ElementBaseType, ElementDataBlob } from "@clowdr-app/shared-types/build/content";
+import { ElementBaseType, ElementDataBlob } from "@clowdr-app/shared-types";
 import React from "react";
 import EditSubtitles from "./EditSubtitles";
 

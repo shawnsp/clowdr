@@ -14,8 +14,8 @@ import {
     useToast,
     VStack,
 } from "@chakra-ui/react";
-import type { ElementDataBlob, ZoomBlob } from "@clowdr-app/shared-types/build/content";
-import { ContinuationDefaultFor } from "@clowdr-app/shared-types/build/continuation";
+import type { ElementDataBlob, ZoomBlob } from "@clowdr-app/shared-types";
+import { ContinuationDefaultFor } from "@clowdr-app/shared-types";
 import { formatRelative } from "date-fns";
 import * as R from "ramda";
 import React, { useCallback, useEffect, useMemo, useRef, useState } from "react";

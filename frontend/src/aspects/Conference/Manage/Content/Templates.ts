@@ -1,4 +1,4 @@
-import { ElementBaseType, ElementBaseTypes } from "@clowdr-app/shared-types/build/content";
+import { ElementBaseType, ElementBaseTypes } from "@clowdr-app/shared-types";
 import assert from "assert";
 import { Content_ElementType_Enum, Content_ItemType_Enum } from "../../../../generated/graphql";
 import { ComponentElementTemplate } from "./ComponentElement";

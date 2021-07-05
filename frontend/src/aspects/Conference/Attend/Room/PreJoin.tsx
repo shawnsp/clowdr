@@ -62,9 +62,6 @@ export function PreJoin({ cameraPreviewRef }: { cameraPreviewRef: React.RefObjec
                                 shape={VmShape.VM_FLAT}
                                 stream={Optional.of(state.microphoneStream)}
                                 blocks={10}
-                                css={{
-                                    w: "100%",
-                                }}
                             />
                             <FAIcon iconStyle="s" icon="volume-up" fontSize="lg" />
                         </>

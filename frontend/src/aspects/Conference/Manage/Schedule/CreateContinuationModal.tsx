@@ -31,12 +31,7 @@ import {
     useDisclosure,
     VStack,
 } from "@chakra-ui/react";
-import {
-    ContinuationDefaultFor,
-    ContinuationTo,
-    ContinuationType,
-    NavigationView,
-} from "@clowdr-app/shared-types/build/continuation";
+import { ContinuationDefaultFor, ContinuationTo, ContinuationType, NavigationView } from "@clowdr-app/shared-types";
 import { format } from "date-fns";
 import React, { useEffect, useMemo, useRef, useState } from "react";
 import { SketchPicker } from "react-color";

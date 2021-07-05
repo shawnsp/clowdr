@@ -1,5 +1,5 @@
 import { Heading } from "@chakra-ui/react";
-import { ElementBaseType, ElementVersionData } from "@clowdr-app/shared-types/build/content";
+import { ElementBaseType, ElementVersionData } from "@clowdr-app/shared-types";
 import AmazonS3Uri from "amazon-s3-uri";
 import assert from "assert";
 import React from "react";

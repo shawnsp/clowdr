@@ -1,5 +1,5 @@
 import { Button, FormControl, FormHelperText, ListItem, UnorderedList, useToast } from "@chakra-ui/react";
-import { ElementBaseType } from "@clowdr-app/shared-types/build/content";
+import { ElementBaseType } from "@clowdr-app/shared-types";
 import AwsS3Multipart from "@uppy/aws-s3-multipart";
 import Uppy from "@uppy/core";
 import "@uppy/core/dist/style.css";

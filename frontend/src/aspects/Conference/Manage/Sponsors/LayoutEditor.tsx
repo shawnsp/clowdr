@@ -11,7 +11,7 @@ import {
     NumberInputStepper,
     Switch,
 } from "@chakra-ui/react";
-import type { LayoutDataBlob } from "@clowdr-app/shared-types/build/content/layoutData";
+import type { LayoutDataBlob } from "@clowdr-app/shared-types";
 import React, { useCallback, useEffect, useMemo, useState } from "react";
 import { Content_ElementType_Enum } from "../../../../generated/graphql";
 
@@ -45,11 +45,10 @@ export function LayoutEditor({
         }
     }, []);
 
-    const layoutData = useMemo<LayoutDataBlob>(() => layoutDataBlob ?? newLayoutData(elementType), [
-        elementType,
-        layoutDataBlob,
-        newLayoutData,
-    ]);
+    const layoutData = useMemo<LayoutDataBlob>(
+        () => layoutDataBlob ?? newLayoutData(elementType),
+        [elementType, layoutDataBlob, newLayoutData]
+    );
 
     const [priority, setPriority] = useState<number | null>(null);
     useEffect(() => {

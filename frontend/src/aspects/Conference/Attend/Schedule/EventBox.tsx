@@ -20,7 +20,7 @@ import {
     VStack,
 } from "@chakra-ui/react";
 import type { FocusableElement } from "@chakra-ui/utils";
-import { ElementBaseType, ElementDataBlob } from "@clowdr-app/shared-types/build/content";
+import { ElementBaseType, ElementDataBlob } from "@clowdr-app/shared-types";
 import { format } from "date-fns";
 import { DateTime } from "luxon";
 import * as R from "ramda";

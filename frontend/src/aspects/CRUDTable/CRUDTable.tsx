@@ -1072,10 +1072,7 @@ function CRUDCreateButton<T, PK extends keyof T>({
 
     const visibleFields = useMemo(
         () =>
-            (primaryKeyField.isHidden
-                ? []
-                : [(primaryKeyField as unknown) as Readonly<PrimaryField<T, keyof T>>]
-            ).concat(
+            (primaryKeyField.isHidden ? [] : [primaryKeyField as unknown as Readonly<PrimaryField<T, keyof T>>]).concat(
                 otherPrimaryFields
                     ? (Object.values(otherPrimaryFields) as Array<Readonly<PrimaryField<T, keyof T>>>).filter(
                           (x) => !x.isHidden && (x.isEditable || x.isEditableAtCreate)
@@ -1311,10 +1308,7 @@ export default function CRUDTable<T, PK extends keyof T>(props: Readonly<CRUDTab
 
     const visibleFields = useMemo(
         () =>
-            (primaryKeyField.isHidden
-                ? []
-                : [(primaryKeyField as unknown) as Readonly<PrimaryField<T, keyof T>>]
-            ).concat(
+            (primaryKeyField.isHidden ? [] : [primaryKeyField as unknown as Readonly<PrimaryField<T, keyof T>>]).concat(
                 otherPrimaryFields
                     ? (Object.values(otherPrimaryFields) as Array<Readonly<PrimaryField<T, keyof T>>>).filter(
                           (x) => !x.isHidden

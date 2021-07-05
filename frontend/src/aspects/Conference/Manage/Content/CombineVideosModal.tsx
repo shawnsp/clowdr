@@ -15,7 +15,7 @@ import {
     ModalOverlay,
     useToast,
 } from "@chakra-ui/react";
-import type { CombineVideosJobDataBlob, InputElement } from "@clowdr-app/shared-types/build/combineVideosJob";
+import type { CombineVideosJobDataBlob, InputElement } from "@clowdr-app/shared-types";
 import { Field, FieldArray, FieldProps, Form, Formik } from "formik";
 import React, { useMemo } from "react";
 import Select from "react-select";

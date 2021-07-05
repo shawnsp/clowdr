@@ -1,5 +1,4 @@
-import type { ElementDataBlob } from "@clowdr-app/shared-types/build/content";
-import type { LayoutDataBlob } from "@clowdr-app/shared-types/build/content/layoutData";
+import type { ElementDataBlob, LayoutDataBlob } from "@clowdr-app/shared-types";
 import type {
     Content_ElementType_Enum,
     ManageContent_ElementFragment,

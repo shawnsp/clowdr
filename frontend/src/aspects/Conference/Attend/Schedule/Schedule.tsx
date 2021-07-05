@@ -366,10 +366,10 @@ function ScheduleFrame({
     );
 
     const timelineParams = useTimelineParameters();
-    const startTime = useMemo(() => DateTime.fromMillis(frame.startTimeMs).setZone(timelineParams.timezone), [
-        frame.startTimeMs,
-        timelineParams.timezone,
-    ]);
+    const startTime = useMemo(
+        () => DateTime.fromMillis(frame.startTimeMs).setZone(timelineParams.timezone),
+        [frame.startTimeMs, timelineParams.timezone]
+    );
     const borderColourRaw = useToken("colors", borderColour);
     const { colorMode } = useColorMode();
 
@@ -506,9 +506,10 @@ export function ScheduleInner({
 
     const [scrollToNow, setScrollToNow] = useState<{ f: () => void } | null>(null);
 
-    const maxParallelRooms = useMemo(() => frames.reduce((acc, frame) => Math.max(acc, frame.items.length), 0), [
-        frames,
-    ]);
+    const maxParallelRooms = useMemo(
+        () => frames.reduce((acc, frame) => Math.max(acc, frame.items.length), 0),
+        [frames]
+    );
     const timeBarWidth = 50;
     const roomColWidth = Math.min(
         800,

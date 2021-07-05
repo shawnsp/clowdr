@@ -1,6 +1,7 @@
 /** @type {import("snowpack").SnowpackUserConfig } */
 
 module.exports = {
+    exclude: ["**/LICENSE"],
     mount: {
         public: "/",
         src: "/_dist_",
@@ -17,8 +18,7 @@ module.exports = {
     devOptions: {
         port: 3000,
     },
-    buildOptions: {
-        /* ... */
-    },
+    buildOptions: {},
     routes: [{ match: "routes", src: ".*", dest: "/index.html" }],
+    workspaceRoot: "../",
 };

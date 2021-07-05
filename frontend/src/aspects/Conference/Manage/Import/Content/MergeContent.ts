@@ -9,7 +9,7 @@ import type {
     IntermediaryTagDescriptor,
     IntermediaryUploadableElementDescriptor,
     IntermediaryUploaderDescriptor,
-} from "@clowdr-app/shared-types/build/import/intermediary";
+} from "@clowdr-app/shared-types";
 import { v4 as uuidv4 } from "uuid";
 import type {
     ElementDescriptor,
@@ -124,9 +124,7 @@ function convertUploader(
     };
 }
 
-function mergeUploaders(
-    uploadableId: string
-): (
+function mergeUploaders(uploadableId: string): (
     context: Context,
     elements1: UploaderDescriptor[],
     elements2: (IntermediaryUploaderDescriptor | UploaderDescriptor)[]

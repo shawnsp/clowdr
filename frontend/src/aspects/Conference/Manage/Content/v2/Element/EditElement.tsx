@@ -22,7 +22,7 @@ import {
     useDisclosure,
     useToast,
 } from "@chakra-ui/react";
-import type { LayoutDataBlob } from "@clowdr-app/shared-types/build/content/layoutData";
+import type { LayoutDataBlob } from "@clowdr-app/shared-types";
 import React, { useCallback, useMemo, useRef, useState } from "react";
 import {
     ManageContent_ElementFragment,
@@ -212,7 +212,11 @@ export function EditElement({
         [nextElement]
     );
 
-    const { isOpen: editPGs_IsOpen, onOpen: editPGs_OnOpen, onClose: editPGs_OnClose } = useDisclosure({
+    const {
+        isOpen: editPGs_IsOpen,
+        onOpen: editPGs_OnOpen,
+        onClose: editPGs_OnClose,
+    } = useDisclosure({
         defaultIsOpen: defaultOpenSecurity,
     });
     const editPGs_OnCloseFull = useCallback(() => {

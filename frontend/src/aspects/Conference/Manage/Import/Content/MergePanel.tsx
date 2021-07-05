@@ -12,7 +12,7 @@ import {
     Spinner,
     useToast,
 } from "@chakra-ui/react";
-import type { IntermediaryContentData } from "@clowdr-app/shared-types/build/import/intermediary";
+import type { IntermediaryContentData } from "@clowdr-app/shared-types";
 import assert from "assert";
 import React, { useEffect, useState } from "react";
 import { v4 as uuidv4 } from "uuid";
@@ -80,9 +80,8 @@ export default function MergePanel({ data }: { data: Record<string, Intermediary
     const [mergedPeopleMap, setMergedPeopleMap] = useState<Map<string, ProgramPersonDescriptor>>();
     const [mergedExhibitionsMap, setMergedExhibitionsMap] = useState<Map<string, ExhibitionDescriptor>>();
     const [mergedTagsMap, setMergedTagsMap] = useState<Map<string, TagDescriptor>>();
-    const [mergedOriginatingDatasMap, setMergedOriginatingDatasMap] = useState<
-        Map<string, OriginatingDataDescriptor>
-    >();
+    const [mergedOriginatingDatasMap, setMergedOriginatingDatasMap] =
+        useState<Map<string, OriginatingDataDescriptor>>();
     const [changes, setChanges] = useState<ChangeSummary[]>([]);
     const [error, setError] = useState<string | null>(null);
 

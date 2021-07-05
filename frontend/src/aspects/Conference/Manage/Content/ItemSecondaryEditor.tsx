@@ -23,7 +23,7 @@ import {
     Tag,
     Text,
 } from "@chakra-ui/react";
-import { ElementBaseTypes } from "@clowdr-app/shared-types/build/content";
+import { ElementBaseTypes } from "@clowdr-app/shared-types";
 import assert from "assert";
 import React from "react";
 import { Content_ElementType_Enum } from "../../../../generated/graphql";

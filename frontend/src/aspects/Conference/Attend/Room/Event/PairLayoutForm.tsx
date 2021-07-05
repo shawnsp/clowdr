@@ -1,5 +1,5 @@
 import { Button, FormControl, FormErrorMessage, FormLabel, Select, useToast } from "@chakra-ui/react";
-import { VonageSessionLayoutData, VonageSessionLayoutType } from "@clowdr-app/shared-types/build/vonage";
+import { VonageSessionLayoutData, VonageSessionLayoutType } from "@clowdr-app/shared-types";
 import { Field, FieldProps, Form, Formik } from "formik";
 import React from "react";
 import type { EventParticipantStreamDetailsFragment } from "../../../../../generated/graphql";

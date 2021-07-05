@@ -1,8 +1,5 @@
 import { Box, Heading, Tab, TabList, TabPanel, TabPanels, Tabs } from "@chakra-ui/react";
-import {
-    IntermediaryRegistrantData,
-    JSONataToIntermediaryRegistrant,
-} from "@clowdr-app/shared-types/build/import/intermediary";
+import { IntermediaryRegistrantData, JSONataToIntermediaryRegistrant } from "@clowdr-app/shared-types";
 import React, { useMemo, useState } from "react";
 import { Permissions_Permission_Enum } from "../../../../../generated/graphql";
 import { LinkButton } from "../../../../Chakra/LinkButton";
@@ -60,9 +57,10 @@ export default function ImportRegistrantsPage(): JSX.Element {
             ),
         [data]
     );
-    const reviewPanel = useMemo(() => <ReviewPanel data={intermediaryData} defaultQuery={defaultReviewQuery} />, [
-        intermediaryData,
-    ]);
+    const reviewPanel = useMemo(
+        () => <ReviewPanel data={intermediaryData} defaultQuery={defaultReviewQuery} />,
+        [intermediaryData]
+    );
     const importPanel = useMemo(() => <ImportPanel data={intermediaryData} />, [intermediaryData]);
 
     return (

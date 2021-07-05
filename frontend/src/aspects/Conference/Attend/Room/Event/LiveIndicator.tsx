@@ -15,8 +15,12 @@ import {
     useDisclosure,
     VStack,
 } from "@chakra-ui/react";
-import { Content_ElementType_Enum, ElementDataBlob, isElementDataBlob } from "@clowdr-app/shared-types/build/content";
-import { ImmediateSwitchData } from "@clowdr-app/shared-types/build/video/immediateSwitchData";
+import {
+    Content_ElementType_Enum,
+    ElementDataBlob,
+    ImmediateSwitchData,
+    isElementDataBlob,
+} from "@clowdr-app/shared-types";
 import { plainToClass } from "class-transformer";
 import { validateSync } from "class-validator";
 import * as R from "ramda";

@@ -1,4 +1,4 @@
-import { ElementBaseType } from "@clowdr-app/shared-types/build/content";
+import { ElementBaseType } from "@clowdr-app/shared-types";
 import { ComponentElementTemplate } from "./ComponentElement";
 import { FileElementTemplate } from "./FileElement";
 import { LinkElementTemplate } from "./LinkElement";

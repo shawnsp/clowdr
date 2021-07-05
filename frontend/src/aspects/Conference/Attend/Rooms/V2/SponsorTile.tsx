@@ -1,5 +1,5 @@
 import { AspectRatio, Button, Center, Image, Text, Tooltip, useColorModeValue, VStack } from "@chakra-ui/react";
-import { ElementDataBlob, isElementDataBlob } from "@clowdr-app/shared-types/build/content";
+import { ElementDataBlob, isElementDataBlob } from "@clowdr-app/shared-types";
 import AmazonS3URI from "amazon-s3-uri";
 import * as R from "ramda";
 import React, { useMemo } from "react";

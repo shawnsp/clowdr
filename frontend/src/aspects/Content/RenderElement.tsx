@@ -1,5 +1,5 @@
 import { Text, VStack } from "@chakra-ui/react";
-import { ElementBaseType, ElementDataBlob } from "@clowdr-app/shared-types/build/content";
+import { ElementBaseType, ElementDataBlob } from "@clowdr-app/shared-types";
 import AmazonS3Uri from "amazon-s3-uri";
 import React from "react";
 import ReactPlayer from "react-player";

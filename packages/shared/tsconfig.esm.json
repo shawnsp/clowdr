@@ -4,14 +4,14 @@
     "exclude": ["node_modules", "**/*.spec.ts", "**/*.test.ts", "jest.config.ts"],
     "compilerOptions": {
         "baseUrl": "./",
-        "outDir": "./build/cjs",
+        "outDir": "./build/esm",
         "rootDir": "./",
         "composite": true,
 
-        "target": "es2015",
-        "module": "commonjs",
+        "target": "ES2020",
+        "module": "ES2020",
 
-        "tsBuildInfoFile": "build/cjs.tsbuildinfo",
+        "tsBuildInfoFile": "build/esm.tsbuildinfo",
 
         "plugins": [{ "transform": "typescript-is/lib/transform-inline/transformer" }]
     }

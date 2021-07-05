@@ -1,7 +1,7 @@
 import { gql } from "@apollo/client";
 import { Box, Heading, Spinner } from "@chakra-ui/react";
-import { ElementBaseType, ElementDataBlob } from "@clowdr-app/shared-types/build/content";
-import type { LayoutDataBlob } from "@clowdr-app/shared-types/build/content/layoutData";
+import type { LayoutDataBlob } from "@clowdr-app/shared-types";
+import { ElementBaseType, ElementDataBlob } from "@clowdr-app/shared-types";
 import React, { useMemo } from "react";
 import {
     Content_ElementType_Enum,

@@ -1,11 +1,6 @@
 import { gql } from "@apollo/client";
 import { useToast } from "@chakra-ui/toast";
-import {
-    ContinuationDefaultFor,
-    ContinuationTo,
-    ContinuationType,
-    NavigationView,
-} from "@clowdr-app/shared-types/build/continuation";
+import { ContinuationDefaultFor, ContinuationTo, ContinuationType, NavigationView } from "@clowdr-app/shared-types";
 import * as R from "ramda";
 import React, { useCallback, useEffect, useMemo, useState } from "react";
 import { useHistory } from "react-router";

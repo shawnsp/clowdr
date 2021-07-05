@@ -8,12 +8,12 @@ export class BaseImmediateSwitchData {
 
 export class FillerImmediateSwitchData extends BaseImmediateSwitchData {
     @IsNotEmpty()
-    kind: "filler";
+    declare kind: "filler";
 }
 
 export class VideoImmediateSwitchData extends BaseImmediateSwitchData {
     @IsNotEmpty()
-    kind: "video";
+    declare kind: "video";
     @IsString()
     @IsUUID()
     elementId: string;
@@ -21,7 +21,7 @@ export class VideoImmediateSwitchData extends BaseImmediateSwitchData {
 
 export class RtmpPushImmediateSwitchData extends BaseImmediateSwitchData {
     @IsNotEmpty()
-    kind: "rtmp_push";
+    declare kind: "rtmp_push";
 }
 
 export class ImmediateSwitchData {

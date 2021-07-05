@@ -3,6 +3,7 @@ import ReactDOM from "react-dom";
 import { ErrorBoundary } from "react-error-boundary";
 import { HelmetProvider } from "react-helmet-async";
 import { BrowserRouter } from "react-router-dom";
+import "reflect-metadata";
 import App from "./App";
 import { AppError } from "./AppError";
 import Auth0CustomProvider from "./aspects/Auth/Auth0CustomProvider";

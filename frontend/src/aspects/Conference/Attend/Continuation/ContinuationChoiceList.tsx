@@ -1,5 +1,5 @@
 import { Button, chakra, ListItem, OrderedList, useColorMode, useColorModeValue, useToken } from "@chakra-ui/react";
-import { ContinuationDefaultFor } from "@clowdr-app/shared-types/build/continuation";
+import { ContinuationDefaultFor } from "@clowdr-app/shared-types";
 import * as R from "ramda";
 import React, { useEffect, useMemo, useState } from "react";
 import Color from "tinycolor2";
@@ -98,10 +98,10 @@ function ContinuationChoice({
     const { colorMode } = useColorMode();
     const baseBgColour = colorMode === "light" ? "gray.200" : "gray.600";
     const baseGrey = useToken("colors", baseBgColour);
-    const baseColour = useMemo(() => (Color(option.colour).getAlpha() !== 0 ? option.colour : baseGrey), [
-        baseGrey,
-        option.colour,
-    ]);
+    const baseColour = useMemo(
+        () => (Color(option.colour).getAlpha() !== 0 ? option.colour : baseGrey),
+        [baseGrey, option.colour]
+    );
     const bgColour = useMemo(() => Color(baseColour), [baseColour]);
     const bgColour_Hover = useMemo(
         () => (colorMode === "light" ? Color(baseColour).darken(15) : Color(baseColour).lighten(15)),

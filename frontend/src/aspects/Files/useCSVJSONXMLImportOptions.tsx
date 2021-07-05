@@ -238,9 +238,7 @@ function ImportOptionsPanel({
     }
 }
 
-export default function useCSVJSONXMLImportOptions(
-    fileInfos: FileInfo[]
-): {
+export default function useCSVJSONXMLImportOptions(fileInfos: FileInfo[]): {
     importOptions: ImportOptions[];
     replaceImportOptions: (newOptions: ImportOptions[]) => void;
     openOptionsButton: JSX.Element;

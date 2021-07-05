@@ -19,13 +19,11 @@ import {
 import {
     ConferenceConfigurationKey,
     EmailTemplate_BaseConfig,
-    isEmailTemplate_BaseConfig,
-} from "@clowdr-app/shared-types/build/conferenceConfiguration";
-import {
     EmailTemplate_Defaults,
     EMAIL_TEMPLATE_SUBMISSION_REQUEST,
     EMAIL_TEMPLATE_SUBTITLES_GENERATED,
-} from "@clowdr-app/shared-types/build/email";
+    isEmailTemplate_BaseConfig,
+} from "@clowdr-app/shared-types";
 import React, { useCallback, useEffect, useMemo, useState } from "react";
 import {
     ConfigureEmailTemplates_ConferenceConfigurationFragment,
@@ -100,7 +98,7 @@ export function ConfigureEmailTemplatesInner({
         if (!conferenceConfiguration || !isEmailTemplate_BaseConfig(conferenceConfiguration.value)) {
             return null;
         }
-        return (conferenceConfiguration.value as unknown) as EmailTemplate_BaseConfig;
+        return conferenceConfiguration.value as unknown as EmailTemplate_BaseConfig;
     }, [conferenceConfigurations]);
 
     const emailTemplateConfig_SubmissionRequest = useMemo<EmailTemplate_BaseConfig | null>(() => {
@@ -111,13 +109,11 @@ export function ConfigureEmailTemplatesInner({
         if (!conferenceConfiguration || !isEmailTemplate_BaseConfig(conferenceConfiguration.value)) {
             return null;
         }
-        return (conferenceConfiguration.value as unknown) as EmailTemplate_BaseConfig;
+        return conferenceConfiguration.value as unknown as EmailTemplate_BaseConfig;
     }, [conferenceConfigurations]);
 
-    const [
-        updateConferenceConfiguration,
-        updateConferenceConfigurationResponse,
-    ] = useConfigureEmailTemplates_UpdateConferenceConfigurationMutation();
+    const [updateConferenceConfiguration, updateConferenceConfigurationResponse] =
+        useConfigureEmailTemplates_UpdateConferenceConfigurationMutation();
 
     const update = useCallback(
         (key: string) => (newValue: EmailTemplate_BaseConfig) => {

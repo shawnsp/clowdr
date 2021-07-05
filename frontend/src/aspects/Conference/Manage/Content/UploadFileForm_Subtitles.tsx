@@ -19,7 +19,7 @@ import {
     VideoPrepublishBlob,
     VideoSponsorsFillerBlob,
     VideoTitlesBlob,
-} from "@clowdr-app/shared-types/build/content";
+} from "@clowdr-app/shared-types";
 import AwsS3Multipart from "@uppy/aws-s3-multipart";
 import Uppy from "@uppy/core";
 import "@uppy/core/dist/style.css";

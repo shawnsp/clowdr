@@ -1,4 +1,4 @@
-import type { IntermediaryOriginatingDataDescriptor } from "@clowdr-app/shared-types/build/import/intermediary";
+import type { IntermediaryOriginatingDataDescriptor } from "@clowdr-app/shared-types";
 import { levenshteinEditDistance } from "levenshtein-edit-distance";
 import { v4 as uuidv4 } from "uuid";
 import type { OriginatingDataDescriptor } from "../Shared/Types";

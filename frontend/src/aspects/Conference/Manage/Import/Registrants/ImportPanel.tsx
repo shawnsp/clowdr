@@ -17,7 +17,7 @@ import {
     useToast,
     VStack,
 } from "@chakra-ui/react";
-import type { IntermediaryRegistrantData } from "@clowdr-app/shared-types/build/import/intermediary";
+import type { IntermediaryRegistrantData } from "@clowdr-app/shared-types";
 import assert from "assert";
 import * as R from "ramda";
 import React, { useEffect, useMemo, useState } from "react";
@@ -71,7 +71,11 @@ export default function ImportPanel({
     const conference = useConference();
     const [hasImported, setHasImported] = useState<boolean>(false);
 
-    const { loading: groupsLoading, data: groupsData, error: groupsError } = useSelectAllGroupsQuery({
+    const {
+        loading: groupsLoading,
+        data: groupsData,
+        error: groupsError,
+    } = useSelectAllGroupsQuery({
         variables: {
             conferenceId: conference.id,
         },
@@ -91,10 +95,8 @@ export default function ImportPanel({
     });
     useQueryErrorToast(registrantsError, false);
 
-    const [
-        importMutation,
-        { loading: importLoading, error: importError, data: importData },
-    ] = useImportRegistrantsMutation();
+    const [importMutation, { loading: importLoading, error: importError, data: importData }] =
+        useImportRegistrantsMutation();
     useQueryErrorToast(importError, false);
 
     const toast = useToast();
@@ -174,9 +176,10 @@ export default function ImportPanel({
     const noEmail = finalData.some((x) => x.email.length === 0);
     const noName = finalData.some((x) => x.name.length === 0);
 
-    const totalInputLength = useMemo(() => Object.values(inputData).reduce((acc, rows) => acc + rows.length, 0), [
-        inputData,
-    ]);
+    const totalInputLength = useMemo(
+        () => Object.values(inputData).reduce((acc, rows) => acc + rows.length, 0),
+        [inputData]
+    );
 
     return (
         <VStack alignItems="flex-start" spacing={8}>

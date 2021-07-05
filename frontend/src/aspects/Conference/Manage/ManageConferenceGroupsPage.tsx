@@ -126,7 +126,11 @@ export default function ManageConferenceGroupsPage(): JSX.Element {
     const conference = useConference();
     const title = useTitle(`Manage groups of ${conference.shortName}`);
 
-    const { loading: loadingAllRoles, error: errorAllRoles, data: allRoles } = useSelectAllRolesQuery({
+    const {
+        loading: loadingAllRoles,
+        error: errorAllRoles,
+        data: allRoles,
+    } = useSelectAllRolesQuery({
         fetchPolicy: "network-only",
         variables: {
             conferenceId: conference.id,

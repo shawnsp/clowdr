@@ -20,7 +20,7 @@ import type {
     FillerImmediateSwitchData,
     RtmpPushImmediateSwitchData,
     VideoImmediateSwitchData,
-} from "@clowdr-app/shared-types/build/video/immediateSwitchData";
+} from "@clowdr-app/shared-types";
 import { Field, FieldProps, Form, Formik } from "formik";
 import * as R from "ramda";
 import React, { useCallback, useMemo, useRef, useState } from "react";

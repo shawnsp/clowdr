@@ -1,6 +1,6 @@
 import type { Reference } from "@apollo/client";
 import { Alert, AlertDescription, AlertIcon, AlertTitle, Divider, Text } from "@chakra-ui/react";
-import { ElementBaseTypes } from "@clowdr-app/shared-types/build/content";
+import { ElementBaseTypes } from "@clowdr-app/shared-types";
 import React, { useMemo } from "react";
 import {
     Content_UploadableElement_Set_Input,

@@ -10,7 +10,7 @@ import {
     useToast,
     VStack,
 } from "@chakra-ui/react";
-import type { EmailTemplate_BaseConfig } from "@clowdr-app/shared-types/build/conferenceConfiguration";
+import type { EmailTemplate_BaseConfig } from "@clowdr-app/shared-types";
 import assert from "assert";
 import React, { useCallback, useEffect, useMemo, useState } from "react";
 import { v4 as uuidv4 } from "uuid";

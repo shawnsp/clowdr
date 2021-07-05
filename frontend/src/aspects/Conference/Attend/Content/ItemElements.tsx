@@ -1,6 +1,6 @@
 import { gql } from "@apollo/client";
 import { Box, Container, Heading, HStack, Text, VStack } from "@chakra-ui/react";
-import type { LayoutDataBlob } from "@clowdr-app/shared-types/build/content/layoutData";
+import type { LayoutDataBlob } from "@clowdr-app/shared-types";
 import React, { useMemo } from "react";
 import { Twemoji } from "react-emoji-render";
 import {

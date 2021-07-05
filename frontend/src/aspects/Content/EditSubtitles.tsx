@@ -21,7 +21,7 @@ import {
     useToast,
     VStack,
 } from "@chakra-ui/react";
-import type { SubtitleDetails } from "@clowdr-app/shared-types/build/content";
+import type { SubtitleDetails } from "@clowdr-app/shared-types";
 import AmazonS3Uri from "amazon-s3-uri";
 import assert from "assert";
 import * as R from "ramda";
