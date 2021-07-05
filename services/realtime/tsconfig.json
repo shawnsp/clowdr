@@ -4,11 +4,11 @@
     "exclude": ["node_modules", "**/*.spec.ts", "**/*.test.ts", "jest.config.ts"],
     "compilerOptions": {
         "baseUrl": "./",
-        "outDir": "./build/" /* Redirect output structure to the directory. */,
-        "rootDir": "./src/" /* Specify the root directory of input files. Use to control the output directory structure with --outDir. */,
+        "outDir": "./build/",
+        "rootDir": "./src/",
         "composite": true,
 
-        "strictPropertyInitialization": true /* Enable strict checking of property initialization in classes. */,
+        "strictPropertyInitialization": true,
 
         "plugins": [{ "transform": "typescript-is/lib/transform-inline/transformer" }]
     }

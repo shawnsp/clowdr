@@ -10,9 +10,7 @@
         "moduleResolution": "node",
         "composite": true,
         /* paths - If you configure Snowpack import aliases, add them here. */
-        // "paths": {
-        //     "@clowdr-app/shared-types": ["../packages/shared/build"]
-        // },
+        "paths": {},
         /* noEmit - Snowpack builds (emits) files, not tsc. */
         "noEmit": true,
         /* Additional Options */

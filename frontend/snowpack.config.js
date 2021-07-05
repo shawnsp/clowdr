@@ -13,12 +13,17 @@ module.exports = {
         "@snowpack/plugin-react-refresh",
         "@snowpack/plugin-dotenv",
         "@snowpack/plugin-typescript",
-        "@snowpack/plugin-webpack",
+        ["@snowpack/plugin-webpack", { sourceMap: true }],
     ],
+    optimize: {
+        target: "es2017",
+    },
     devOptions: {
         port: 3000,
     },
-    buildOptions: {},
+    buildOptions: {
+        sourcemap: true,
+    },
     routes: [{ match: "routes", src: ".*", dest: "/index.html" }],
     workspaceRoot: "../",
 };
