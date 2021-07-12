@@ -1,3 +1,4 @@
+import "@vime/core/themes/default.css";
 import React from "react";
 import ReactDOM from "react-dom";
 import { ErrorBoundary } from "react-error-boundary";
