@@ -33,7 +33,7 @@ import ItemList from "../Content/ItemList";
 import { ExhibitionsGrid } from "../Exhibition/ExhibitionsPage";
 import { SponsorBoothsInner } from "../Rooms/V2/SponsorBooths";
 import SearchPanel from "../Search/SearchPanel";
-import { ScheduleFetchWrapper, ScheduleInner } from "./Schedule";
+import { ScheduleFetchWrapper, ScheduleInner } from "./v1/Schedule";
 
 gql`
     query Schedule_HappeningSoon($conferenceId: uuid!, $startBefore: timestamptz!, $endAfter: timestamptz!) {
@@ -188,9 +188,10 @@ export function ScheduleModal({
 
     const [anyHappeningSoon, setAnyHappeningSoon] = useState<boolean>(false);
     const now = useRealTime(15 * 60 * 1000);
-    const endAfter = useMemo(() => new Date(roundDownToNearest(now - 10 * 60 * 1000, 5 * 60 * 1000)).toISOString(), [
-        now,
-    ]);
+    const endAfter = useMemo(
+        () => new Date(roundDownToNearest(now - 10 * 60 * 1000, 5 * 60 * 1000)).toISOString(),
+        [now]
+    );
     const startBefore = useMemo(
         () => new Date(roundUpToNearest(now + 2 * 60 * 60 * 1000, 15 * 60 * 1000)).toISOString(),
         [now]
@@ -244,9 +245,10 @@ export function ScheduleModal({
     useEffect(() => {
         setAnySponsors?.(!!result.data && result.data.content_Item.length > 0);
     }, [setAnySponsors, result.data]);
-    const sponsors = useMemo(() => <SponsorBoothsInner sponsors={result.data?.content_Item ?? []} />, [
-        result.data?.content_Item,
-    ]);
+    const sponsors = useMemo(
+        () => <SponsorBoothsInner sponsors={result.data?.content_Item ?? []} />,
+        [result.data?.content_Item]
+    );
 
     const selectedTabIndex = useMemo(() => {
         const offset1 = anyHappeningSoon ? 1 : 0;
