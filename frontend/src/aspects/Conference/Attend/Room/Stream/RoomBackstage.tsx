@@ -323,8 +323,9 @@ export function RoomBackstage({
                         </AlertDialog>
                     </>
                 ) : (
-                    <Button variant="outline" borderColor="red.600" color="red.600" isDisabled={true} mt={4}>
+                    <Button variant="outline" borderColor="red.600" color="red.600" onClick={()=> window.location.reload()} mt={4}>
                         Live stream ended
+                        Enter attendee view
                     </Button>
                 )
             ) : undefined,
