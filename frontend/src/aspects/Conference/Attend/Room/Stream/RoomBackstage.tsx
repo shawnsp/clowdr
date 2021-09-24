@@ -323,9 +323,19 @@ export function RoomBackstage({
                         </AlertDialog>
                     </>
                 ) : (
-                    <Button variant="outline" borderColor="red.600" color="red.600" onClick={()=> window.location.reload()} mt={4}>
-                        Live stream ended
-                        Enter attendee view
+                    // <Button variant="outline" borderColor="red.600" color="red.600" onClick={()=> window.location.reload()} mt={4}>
+                    //     Live stream ended
+                    //     Enter attendee view
+                    // </Button>
+
+                    <Button variant="outline" borderColor="red.600" color="red.600" mt={4}
+                    onClick={() =>{
+                        nextRoomEventId
+                            ? setWatchStreamForEventId(nextRoomEventId)
+                            : setWatchStreamForEventId(null)
+                    }
+                    }>
+                        Leave backstage
                     </Button>
                 )
             ) : undefined,
